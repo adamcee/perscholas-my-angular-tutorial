@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 
-@NgModule({
+const NGModuleConfig = {
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -23,7 +23,10 @@ import { ProductListComponent } from './product-list/product-list.component';
   bootstrap: [
     AppComponent
   ]
-})
+}
+
+
+@NGModule(NGModuleConfig)
 export class AppModule { }
 
 
