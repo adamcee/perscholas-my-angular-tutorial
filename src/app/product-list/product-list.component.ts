@@ -10,6 +10,10 @@ import { products } from '../products';
 export class ProductListComponent {
   products = products;
 
+  getProductDescription(product) {
+    return "Description: " + (product.description || "A Great Product");
+  }
+
   share() {
     window.alert('The product has been shared!');
   }
