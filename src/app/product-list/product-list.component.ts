@@ -10,7 +10,14 @@ import { products } from '../products';
 export class ProductListComponent {
   products = products;
 
+
+ 
+
   getProductDescription(product) {
+    if(!product.description) {
+     return "";
+    }
+    
     return "Description: " + (product.description || "A Great Product");
   }
 
