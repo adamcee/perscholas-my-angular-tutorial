@@ -10,7 +10,7 @@ if (environment.production) {
 
 platformBrowserDynamic()
   .bootstrapModule(AppModule)
-  .catch(errorHandler);
+  .catch((e) => console.error(e));
 
 /*
 Copyright Google LLC. All Rights Reserved.
