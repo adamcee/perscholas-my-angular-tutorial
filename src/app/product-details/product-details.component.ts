@@ -12,7 +12,7 @@ import { CartService } from '../cart.service';
 })
 export class ProductDetailsComponent implements OnInit {
   product;
-  
+
   constructor(
     private route: ActivatedRoute, 
     private cartService: CartService,
@@ -24,12 +24,14 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('ngOnInit')
     const routeParams = this.route.snapshot.paramMap;
-    const productIdFromRoute = Number(routeParams.get('id'));
+    const productIdFromRoute = Number(routeParams.get('productId'));
+|
+    //console.log(routeParams);
+    //console.log(productIdFromRoute);
 
-    this.product = products.find(
-      product => product.id === productIdFromRoute
-    );
+    this.product = products.find(product => product.id == productIdFromRoute);
   }
 
 }
