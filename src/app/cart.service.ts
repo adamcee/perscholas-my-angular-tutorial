@@ -8,6 +8,8 @@ export class CartService {
 
   addToCart(product) {
     this.items.push(product);
+    console.log('adding product ', product);
+    console.log('new cart ', this.getItems());
   }
 
   getItems() {
