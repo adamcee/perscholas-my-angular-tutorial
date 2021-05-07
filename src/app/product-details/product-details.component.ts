@@ -24,10 +24,10 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('ngOnInit')
+    console.log('ngOnInit');
     const routeParams = this.route.snapshot.paramMap;
     const productIdFromRoute = Number(routeParams.get('productId'));
-|
+    
     //console.log(routeParams);
     //console.log(productIdFromRoute);
 
